@@ -20,7 +20,7 @@ public class Connexion {
     
     private final String url = "jdbc:mysql://localhost:3306/CertificationDB";
     private final String login = "root";
-    private final String password = ""; //ph/axo>vJe;789
+    private final String password = "ph/axo>vJe;789"; //FIXED : mon mot de passe est ajouté.
     
     // Constructeur privé pour empêcher l'instanciation directe
     private Connexion() {

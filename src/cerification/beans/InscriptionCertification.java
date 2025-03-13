@@ -9,11 +9,16 @@ package cerification.beans;
  * @author yassinesalihi
  */
 public class InscriptionCertification {
-    
+
     //private int id; pas de id
     private Certification certification;
     private Etudiant etudiant;
-    
+
+    public InscriptionCertification(Certification certification, Etudiant etudiant) {
+        this.certification = certification;
+        this.etudiant = etudiant;
+    }
+
     public Certification getCertification() {
         return certification;
     }
@@ -30,7 +35,4 @@ public class InscriptionCertification {
         this.etudiant = etudiant;
     }
 
-    
-    
-    
 }

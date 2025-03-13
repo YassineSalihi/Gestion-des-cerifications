@@ -23,6 +23,11 @@ public class CertificationService implements IDao<Certification>{
     
     private Connexion connexion;
 
+    public CertificationService() {
+        connexion = Connexion.getInstance();
+    }
+
+    
     @Override
     public boolean create(Certification o) {
          String req = "INSERT INTO Certification ( id, nom, organisme, cout) VALUES (null, ?, ?, ?)";
