@@ -5,6 +5,7 @@
 package gui;
 
 import cerification.beans.Etudiant;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import services.CertificationService;
 import services.EtudiantService;
@@ -15,23 +16,27 @@ import services.EtudiantService;
  */
 public class EtudiantForm extends javax.swing.JInternalFrame {
 
-    private CertificationService cs;
+    // private CertificationService cs;
     private EtudiantService es;
     private DefaultTableModel model;
+    private static int id;
+
     /**
      * Creates new form EtudiantForm
      */
     public EtudiantForm() {
         initComponents();
-        cs = new CertificationService();
+        // cs = new CertificationService();
         es = new EtudiantService();
-       // model = (DefaultTableModel) listeEtudiants.getModel();
+        model = (DefaultTableModel) listeEtudiants.getModel();
+        load();// GO BACK LATER
     }
-    
-    void load(){
-        
-        for (Etudiant e : es.findAll()){
-           
+
+    public void load() {
+
+        model.setRowCount(0);
+        for (Etudiant e : es.findAll()) {
+            model.addRow(new Object[]{e.getId(), e.getNom(), e.getPrenom(), e.getEmail()});
         }
     }
 
@@ -52,6 +57,8 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
         txtPrenom = new javax.swing.JTextField();
         txtMail = new javax.swing.JTextField();
         bnAdd = new javax.swing.JButton();
+        bnDelete = new javax.swing.JButton();
+        bnUpdate = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         listeEtudiants = new javax.swing.JTable();
 
@@ -77,6 +84,27 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
 
         bnAdd.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
         bnAdd.setText("Ajouter");
+        bnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnAddActionPerformed(evt);
+            }
+        });
+
+        bnDelete.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        bnDelete.setText("Supprimer");
+        bnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnDeleteActionPerformed(evt);
+            }
+        });
+
+        bnUpdate.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
+        bnUpdate.setText("Modifier");
+        bnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bnUpdateActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -88,15 +116,17 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(104, 104, 104)
+                .addGap(27, 27, 27)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(179, 179, 179)
-                        .addComponent(bnAdd))
-                    .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(343, Short.MAX_VALUE))
+                    .addComponent(txtNom, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(179, 179, 179)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(bnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(bnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(322, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -109,11 +139,13 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
                 .addGap(35, 35, 35)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
-                    .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtPrenom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bnDelete))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtMail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(bnUpdate))
                 .addGap(33, 33, 33))
         );
 
@@ -125,6 +157,11 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
                 "id", "nom", "prenom", "email"
             }
         ));
+        listeEtudiants.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listeEtudiantsMouseClicked(evt);
+            }
+        });
         jScrollPane1.setViewportView(listeEtudiants);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -152,9 +189,90 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMailActionPerformed
 
+    private void bnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnAddActionPerformed
+        // TODO add your handling code here:
+        String nom = txtNom.getText().toString();
+        String prenom = txtPrenom.getText().toString();
+        String email = txtMail.getText().toString();
+
+        if (es.create(new Etudiant(nom, prenom, email))) {
+            JOptionPane.showMessageDialog(this, "Étudiant ajouté avec succès");
+            load();
+        } else {
+            JOptionPane.showMessageDialog(this, "Erreur lors de l'ajout");
+        }
+    }//GEN-LAST:event_bnAddActionPerformed
+
+    private void bnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnDeleteActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = listeEtudiants.getSelectedRow();
+        if (selectedRow != -1) {
+            int response = JOptionPane.showConfirmDialog(this, "Voulez-vous vraiment supprimer cet étudiant ?");
+            if (response == JOptionPane.YES_OPTION) {
+                int selectedId = (int) model.getValueAt(selectedRow, 0);
+                es.delete(es.findById(selectedId));
+                load();
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Veuillez sélectionner un étudiant dans la liste.");
+        }
+
+        /*int response = JOptionPane.showConfirmDialog(this, "Voulez vous vraiment supprimer cette étudiant ?");
+        if (response == 0) {
+            es.delete(es.findById(id));
+            load();
+        }*/
+    }//GEN-LAST:event_bnDeleteActionPerformed
+
+    private void bnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnUpdateActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = listeEtudiants.getSelectedRow();
+        if (selectedRow != -1) {
+            int response = JOptionPane.showConfirmDialog(this, "Voulez-vous vraiment modifier cet étudiant ?");
+            if (response == JOptionPane.YES_OPTION) {
+                int selectedId = (int) model.getValueAt(selectedRow, 0);
+                String nom = txtNom.getText();
+                String prenom = txtPrenom.getText();
+                String email = txtMail.getText();
+
+                if (es.update(new Etudiant(selectedId, nom, prenom, email))) {
+                    JOptionPane.showMessageDialog(this, "Étudiant modifié avec succès ;)");
+                    load();
+                } else {
+                    JOptionPane.showMessageDialog(this, "Erreur de l'étudiant du certificat. *_*");
+                }
+            }
+        } else {
+            JOptionPane.showMessageDialog(this, "Veuillez sélectionner un étudiant à modifier !");
+        }
+        /*int response = JOptionPane.showConfirmDialog(this, "Voulez vous vraiment modifier cette certification?");
+        if (response == 0) {
+            String nom = txtNom.getText().toString();
+            String prenom = txtPrenom.getText().toString();
+            String email = txtMail.getText().toString();
+            if (es.update(new Etudiant(id, nom, prenom, email))) {
+                JOptionPane.showMessageDialog(this, "Certification modifiée! ;)");
+                load();
+            } else {
+                JOptionPane.showMessageDialog(this, "Erreur de la modification du certificat. *_*");
+            }
+        }*/
+    }//GEN-LAST:event_bnUpdateActionPerformed
+
+    private void listeEtudiantsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listeEtudiantsMouseClicked
+        // TODO add your handling code here:
+        id = Integer.parseInt(model.getValueAt(listeEtudiants.getSelectedRow(), 0).toString());
+
+        txtNom.setText(model.getValueAt(listeEtudiants.getSelectedRow(), 1).toString());
+        txtPrenom.setText(model.getValueAt(listeEtudiants.getSelectedRow(), 2).toString());
+        txtMail.setText(model.getValueAt(listeEtudiants.getSelectedRow(), 3).toString());
+    }//GEN-LAST:event_listeEtudiantsMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton bnAdd;
+    private javax.swing.JButton bnDelete;
+    private javax.swing.JButton bnUpdate;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
