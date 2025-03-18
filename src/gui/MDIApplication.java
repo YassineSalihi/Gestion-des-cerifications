@@ -56,6 +56,11 @@ public class MDIApplication extends javax.swing.JFrame {
 
         saveMenuItem.setMnemonic('s');
         saveMenuItem.setText("Etudiant");
+        saveMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                saveMenuItemActionPerformed(evt);
+            }
+        });
         fileMenu.add(saveMenuItem);
 
         exitMenuItem.setMnemonic('x');
@@ -117,6 +122,13 @@ public class MDIApplication extends javax.swing.JFrame {
         cf.setVisible(true);
         
     }//GEN-LAST:event_openMenuCertificationActionPerformed
+
+    private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
+        // TODO add your handling code here:
+        EtudiantForm ef = new EtudiantForm();
+        desktopPane.add(ef);
+        ef.setVisible(true);
+    }//GEN-LAST:event_saveMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
