@@ -60,7 +60,7 @@ public class InscriptionCertificationService implements IDao<InscriptionCertific
         }
         return false;
     }
-    
+
     @Override
     public boolean update(InscriptionCertification o) {
         String req = "UPDATE InscriptionCertification SET certification_id = ? WHERE etudiant_id = ?";
@@ -98,6 +98,16 @@ public class InscriptionCertificationService implements IDao<InscriptionCertific
             System.out.println(ex.getMessage());
         }
         return inscriptions;
+    }
+
+    public Iterable<InscriptionCertification> findByCertification(Certification certification) {
+        List<InscriptionCertification> result = new ArrayList<>();
+        for (InscriptionCertification ic : findAll()) {
+            if (ic.getCertification().getId() == certification.getId()) { // Comparaison par ID
+                result.add(ic);
+            }
+        }
+        return result;
     }
 
 }

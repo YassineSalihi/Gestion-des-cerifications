@@ -27,7 +27,7 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
     private EtudiantService es;
     private CertificationService cs;
     private DefaultTableModel model;
-    private List<Etudiant> lstEtudiant = new ArrayList<>();
+    private List<Etudiant> lstEtudiant = new ArrayList<>(); // FIX : String problem.
     private List<Certification> lstCertification = new ArrayList<>();
 
     /**
@@ -92,6 +92,12 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         listeEtudiant = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         listeInscriptions = new javax.swing.JTable();
+
+        setClosable(true);
+        setIconifiable(true);
+        setMaximizable(true);
+        setResizable(true);
+        setTitle("Inscription");
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
