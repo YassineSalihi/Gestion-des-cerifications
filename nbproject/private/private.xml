@@ -5,11 +5,11 @@
         <group>
             <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/Main.java</file>
             <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/MDIApplication.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/CertificationForm.java</file>
             <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/EtudiantForm.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/cerification/beans/Etudiant.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/cerification/beans/User.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/test/cerification/beans/EtudiantTest.java</file>
+            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/InscriptionForm.java</file>
+            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/cerification/beans/InscriptionCertification.java</file>
+            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/services/InscriptionCertificationService.java</file>
+            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/CertificationForm.java</file>
         </group>
     </open-files>
 </project-private>
