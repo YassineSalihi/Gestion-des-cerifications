@@ -21,16 +21,16 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 ## Diagramme de Classe
 ## Architecture
 ## Technologies
-Langage : Java
-Framework d'interface graphique : Java Swing
-Base de données : MySQL
-Bibliothèque graphique : JFreeChart (not done yet)
-Test des methodes et classes : JUnit
-Outils de développement :
-  IDE Java : NetBeans
-  Outil de diagramme : Umbrello (for linux)
-  Outil de gestion de base de données : phpMyAdmin
-Accès aux données : JDBC
+      Langage : Java
+      Framework d'interface graphique : Java Swing
+      Base de données : MySQL
+      Bibliothèque graphique : JFreeChart (not done yet)
+      Test des methodes et classes : JUnit
+      Outils de développement :
+        IDE Java : NetBeans
+        Outil de diagramme : Umbrello (for linux)
+        Outil de gestion de base de données : phpMyAdmin
+      Accès aux données : JDBC
 
 
 
