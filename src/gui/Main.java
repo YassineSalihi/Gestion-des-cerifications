@@ -110,7 +110,10 @@ public class Main extends javax.swing.JFrame {
         // TODO add your handling code here:
         String login = txtLogin.getText().toString();
         String password = txtPassword.getText().toString();
-        if(login.equals("ens") && password.equals("123")){ // TODO : modify login ***************************************
+        
+        String regex = "^[a-zA-Z]{4}\\d{4}@uca\\.ac\\.ma$";
+        
+        if(login.matches(regex) && password.equals("123")){ // TODO : modify login ***************************************
             MDIApplication mdi = new MDIApplication();
             mdi.setVisible(true);
             this.setVisible(false);
