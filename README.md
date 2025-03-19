@@ -32,7 +32,16 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
         Outil de gestion de base de données : phpMyAdmin
       Accès aux données : JDBC
 
+## 📽️ Démonstration Vidéo
+👉 [▶️ Cliquez ici pour voir la démo vidéo]
+voilà le lien de la video aussi : https://drive.google.com/drive/folders/1KaHKFGvEEZBL7h-xaHp3r7T_uRpFAUIT?usp=drive_link
 
+> La vidéo montre comment fonctionne l'application l'application.
+
+## 📂 Structure du projet
+- src/
+- videos/2025-03-19 23-35-58.mkv
+- README.md
 
 
 ## Structure de la Base de Données
