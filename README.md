@@ -19,6 +19,7 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 -- Fournir un suivi clair et structuré des données.
 ##  Diagramme de Cas d'Utilisation
 ## Diagramme de Classe
+![Class Diagram](images/class_diagram.png)
 ## Architecture
 ## Technologies
       Langage : Java
