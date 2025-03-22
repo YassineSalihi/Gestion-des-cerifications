@@ -18,9 +18,9 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 -- Lister et filtrer les inscriptions par certification.
 -- Fournir un suivi clair et structuré des données.
 ##  Diagramme de Cas d'Utilisation
-![Diagramme de cas d'utilisation](images/use_case2.png)
+![Diagramme de cas d'utilisation](images/use_case.png)
 ## Diagramme de Classe
-![Class Diagram](images/class%20diagram.png)
+![Class Diagram](images/use_case2.png)
 ## Architecture
 ## Technologies
       Langage : Java
