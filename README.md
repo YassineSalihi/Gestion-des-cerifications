@@ -56,10 +56,10 @@ CREATE TABLE Certification (
     cout DECIMAL(10, 2) NOT NULL
 );
 
-CREATE TABLE Étudiant (
+CREATE TABLE Etudiant (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nom VARCHAR(255) NOT NULL,
-    prénom VARCHAR(255) NOT NULL,
+    prenom VARCHAR(255) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE
 );
 
@@ -68,7 +68,7 @@ CREATE TABLE InscriptionCertification (
     certification_id INT NOT NULL,
     etudiant_id INT NOT NULL,
     FOREIGN KEY (certification_id) REFERENCES Certification(id),
-    FOREIGN KEY (etudiant_id) REFERENCES Étudiant(id)
+    FOREIGN KEY (etudiant_id) REFERENCES Etudiant(id)
 );
 
 CREATE TABLE User (
