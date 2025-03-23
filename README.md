@@ -37,6 +37,11 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 ## 📽️ Démonstration Vidéo
 👉 [▶️ Cliquez ici pour voir la démo vidéo]
 voilà le lien de la video aussi : https://drive.google.com/file/d/1YXkzAbGyuirqfLa8JcTeXhFz2CmShM-f/view?usp=drive_link
+<video width="640" height="360" controls>
+  <source src="video/demo2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 
 > La vidéo montre comment fonctionne l'application l'application.
 
