@@ -36,7 +36,7 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 
 ## 📽️ Démonstration Vidéo
 
-https://github.com/user-attachments/assets/4b3647f3-0e26-4552-9327-583e8e12e463
+https://github.com/user-attachments/assets/81922593-817a-4c1c-ba91-064b997a4135
 
 > La vidéo montre comment fonctionne l'application l'application.
 
