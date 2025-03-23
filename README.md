@@ -17,22 +17,36 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
       -- Inscrire des étudiants aux certifications.
       -- Lister et filtrer les inscriptions par certification.
       -- Fournir un suivi clair et structuré des données.
+## Fonctionnalités Principales
+      🔎 Gestion des Certifications
+      
+      🧑‍🎓 Gestion des Étudiants
+      
+      📝 Gestion des Inscriptions
+      
+      📊 Génération de Graphiques avec JFreeChart
+      
+      🔒 Validation des données et gestion des erreurs
+
 ##  Diagramme de Cas d'Utilisation
 ![Diagramme de cas d'utilisation](images/use_case.png)
 ## Diagramme de Classe
 ![Class Diagram](images/class_diagram_last.png)
 ## Architecture
 ## Technologies
-      Langage : Java
-      Framework d'interface graphique : Java Swing
-      Base de données : MySQL
-      Bibliothèque graphique : JFreeChart (not done yet)
-      Test des methodes et classes : JUnit
+
+
+      Langage                         | Java
+      Framework d'interface graphique | Java Swing
+      Base de données                 | MySQL
+      Bibliothèque graphique          | JFreeChart 
+      Test des methodes et classes    | JUnit
+      
       Outils de développement :
-        IDE Java : NetBeans
-        Outil de diagramme : Umbrello (for linux)
+        IDE Java                            : NetBeans
+        Outil de diagramme                  : Umbrello (for linux)
         Outil de gestion de base de données : phpMyAdmin
-      Accès aux données : JDBC
+      Accès aux données                     : JDBC
 
 ## 📽️ Démonstration Vidéo
 
