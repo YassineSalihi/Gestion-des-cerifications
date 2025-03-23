@@ -29,7 +29,7 @@ public class EtudiantForm extends javax.swing.JInternalFrame {
         // cs = new CertificationService();
         es = new EtudiantService();
         model = (DefaultTableModel) listeEtudiants.getModel();
-        load();// GO BACK LATER
+        load();
     }
 
     public void load() {

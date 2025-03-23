@@ -69,7 +69,7 @@ public class BarChart extends javax.swing.JInternalFrame {
         
         Map<String, Integer> countMap = new HashMap<>();
         for (InscriptionCertification ic : inscriptions) {
-            String certName = ic.getCertification().getNom();
+            String certName = ic.getCertification().getOrganisme();
             countMap.put(certName, countMap.getOrDefault(certName, 0) + 1);
         }
 

@@ -61,7 +61,7 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         listeEtudiant.addItem("Choisir un étudiant");
         for (Etudiant e : es.findAll()) {
             lstEtudiant.add(e);
-            listeEtudiant.addItem(e.getNom() + " --- " + e.getNom()+ " --- " + e.getEmail()); // j'ai ajouté temporairerement;
+            listeEtudiant.addItem(e.getNom() + " --- " + e.getPrenom()+ " --- " + e.getEmail()); // j'ai ajouté temporairerement;
         }
     }
     
@@ -69,7 +69,7 @@ public class InscriptionForm extends javax.swing.JInternalFrame {
         listeCertification.addItem("Choisir une certification");
         for (Certification c : cs.findAll()) {
             lstCertification.add(c);
-            listeCertification.addItem(c.getOrganisme()); // j'ai ajouté getOrganisme() temporairerement
+            listeCertification.addItem(c.getOrganisme() + " | " + c.getNom()); // j'ai ajouté getOrganisme() temporairerement
         }
     }
     

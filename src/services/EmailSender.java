@@ -16,7 +16,7 @@ public class EmailSender {
 
     public static boolean sendEmail(String to, String subject, String messageText) {
         final String fromEmail = "y.salihi7457@uca.ac.ma";
-        final String password = "G130517457@2004";
+        final String password = ""; // TO FIX
 
         Properties props = new Properties();
         props.put("mail.smtp.host", "smtp.gmail.com");
