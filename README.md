@@ -35,7 +35,7 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
       Accès aux données : JDBC
 
 ## 📽️ Démonstration Vidéo
-▶️ 
+
 https://github.com/user-attachments/assets/4b3647f3-0e26-4552-9327-583e8e12e463
 
 > La vidéo montre comment fonctionne l'application l'application.
