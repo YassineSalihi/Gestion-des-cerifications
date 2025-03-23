@@ -35,14 +35,8 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
       Accès aux données : JDBC
 
 ## 📽️ Démonstration Vidéo
-👉 [▶️ Cliquez ici pour voir la démo vidéo]
-voilà le lien de la video aussi : https://drive.google.com/file/d/1YXkzAbGyuirqfLa8JcTeXhFz2CmShM-f/view?usp=drive_link
-```html
-<video width="640" height="360" controls>
-  <source src="video/demo2.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-```
+▶️ 
+https://github.com/user-attachments/assets/4b3647f3-0e26-4552-9327-583e8e12e463
 
 > La vidéo montre comment fonctionne l'application l'application.
 
