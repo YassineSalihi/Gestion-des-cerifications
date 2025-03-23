@@ -63,7 +63,6 @@ CREATE TABLE Etudiant (
 );
 
 CREATE TABLE InscriptionCertification (
-    id INT AUTO_INCREMENT PRIMARY KEY,
     certification_id INT NOT NULL,
     etudiant_id INT NOT NULL,
     FOREIGN KEY (certification_id) REFERENCES Certification(id),
