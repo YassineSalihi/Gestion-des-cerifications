@@ -6,17 +6,17 @@ de gérer efficacement les certifications professionnelles ainsi que les inscrip
 ##  Problématique
 La gestion manuelle des inscriptions aux certifications entraîne :
 
-   -- des risques d'erreurs,
-   -- une perte de temps,
-   -- une difficulté dans la recherche et le suivi des étudiants inscrits.
+      -- des risques d'erreurs,
+      -- une perte de temps,
+      -- une difficulté dans la recherche et le suivi des étudiants inscrits.
 
 D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 
 ## Objectif du Projet
--- Permettre d'ajouter et de gérer des certifications.
--- Inscrire des étudiants aux certifications.
--- Lister et filtrer les inscriptions par certification.
--- Fournir un suivi clair et structuré des données.
+      -- Permettre d'ajouter et de gérer des certifications.
+      -- Inscrire des étudiants aux certifications.
+      -- Lister et filtrer les inscriptions par certification.
+      -- Fournir un suivi clair et structuré des données.
 ##  Diagramme de Cas d'Utilisation
 ![Diagramme de cas d'utilisation](images/use_case.png)
 ## Diagramme de Classe
