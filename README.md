@@ -33,6 +33,7 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 ## Diagramme de Classe
 ![Class Diagram](images/class_diagram_last.png)
 ## Architecture
+![Architecture](images/arch.png)
 ## Technologies
 
 
