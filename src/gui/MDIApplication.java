@@ -36,9 +36,9 @@ public class MDIApplication extends javax.swing.JFrame {
         jMenuItem1 = new javax.swing.JMenuItem();
         exitMenuItem = new javax.swing.JMenuItem();
         editMenu = new javax.swing.JMenu();
-        cutMenuItem = new javax.swing.JMenuItem();
         jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem3 = new javax.swing.JMenuItem();
+        graphMenu = new javax.swing.JMenu();
         helpMenu = new javax.swing.JMenu();
         contentMenuItem = new javax.swing.JMenuItem();
         aboutMenuItem = new javax.swing.JMenuItem();
@@ -88,15 +88,6 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu.setMnemonic('e');
         editMenu.setText("Recherche");
 
-        cutMenuItem.setMnemonic('t');
-        cutMenuItem.setText("Nombre d'étudiants par Certification");
-        cutMenuItem.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cutMenuItemActionPerformed(evt);
-            }
-        });
-        editMenu.add(cutMenuItem);
-
         jMenuItem2.setText("Etudiant par Certification");
         jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,6 +105,14 @@ public class MDIApplication extends javax.swing.JFrame {
         editMenu.add(jMenuItem3);
 
         menuBar.add(editMenu);
+
+        graphMenu.setText("Statistique");
+        graphMenu.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                graphMenuMouseClicked(evt);
+            }
+        });
+        menuBar.add(graphMenu);
 
         helpMenu.setMnemonic('h');
         helpMenu.setText("Help");
@@ -157,7 +156,7 @@ public class MDIApplication extends javax.swing.JFrame {
         CertificationForm cf = new CertificationForm();
         desktopPane.add(cf);
         cf.setVisible(true);
-        
+
     }//GEN-LAST:event_openMenuCertificationActionPerformed
 
     private void saveMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveMenuItemActionPerformed
@@ -173,10 +172,6 @@ public class MDIApplication extends javax.swing.JFrame {
         desktopPane.add(insf);
         insf.setVisible(true);
     }//GEN-LAST:event_jMenuItem1ActionPerformed
-
-    private void cutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cutMenuItemActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_cutMenuItemActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
         // TODO add your handling code here:
@@ -195,6 +190,14 @@ public class MDIApplication extends javax.swing.JFrame {
     private void aboutMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_aboutMenuItemActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_aboutMenuItemActionPerformed
+
+    /**/
+    private void graphMenuMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_graphMenuMouseClicked
+        // TODO add your handling code here:
+        BarChart bc = new BarChart();
+        desktopPane.add(bc);
+        bc.setVisible(true);
+    }//GEN-LAST:event_graphMenuMouseClicked
 
     /**
      * @param args the command line arguments
@@ -234,11 +237,11 @@ public class MDIApplication extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JMenuItem aboutMenuItem;
     private javax.swing.JMenuItem contentMenuItem;
-    private javax.swing.JMenuItem cutMenuItem;
     private javax.swing.JDesktopPane desktopPane;
     private javax.swing.JMenu editMenu;
     private javax.swing.JMenuItem exitMenuItem;
     private javax.swing.JMenu fileMenu;
+    private javax.swing.JMenu graphMenu;
     private javax.swing.JMenu helpMenu;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
