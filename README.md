@@ -20,7 +20,7 @@ D'où la nécessité d'une solution logicielle fiable et simple d'utilisation.
 ##  Diagramme de Cas d'Utilisation
 ![Diagramme de cas d'utilisation](images/use_case.png)
 ## Diagramme de Classe
-![Class Diagram](images/use_case2.png)
+![Class Diagram](images/class_diagram_last.png)
 ## Architecture
 ## Technologies
       Langage : Java
