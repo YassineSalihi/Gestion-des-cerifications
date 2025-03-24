@@ -42,8 +42,10 @@ public class Main extends javax.swing.JFrame {
         btnForgotPassword = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 204)));
 
         jLabel1.setText("Login");
 
@@ -81,14 +83,14 @@ public class Main extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(txtLogin)
                             .addComponent(txtPassword)
-                            .addComponent(btnForgotPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 183, Short.MAX_VALUE)))
+                            .addComponent(btnForgotPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(270, 270, 270)
                         .addComponent(bnConnexion))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(297, 297, 297)
                         .addComponent(jLabel1)))
-                .addContainerGap(263, Short.MAX_VALUE))
+                .addContainerGap(230, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,19 +107,10 @@ public class Main extends javax.swing.JFrame {
                 .addComponent(bnConnexion)
                 .addGap(18, 18, 18)
                 .addComponent(btnForgotPassword)
-                .addContainerGap(60, Short.MAX_VALUE))
+                .addContainerGap(106, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -132,7 +125,8 @@ public class Main extends javax.swing.JFrame {
         if (login.matches(regex) && password.equals("123")) { // TODO : modify login ***************************************
             MDIApplication mdi = new MDIApplication();
             mdi.setVisible(true);
-            this.setVisible(false);
+            this.dispose(); // ligne ajouté 
+            // this.setVisible(false);
         } else {
             JOptionPane.showMessageDialog(this, "Login ou mot de passe incorrect!"); // TODO : search for color dialog 
         }
