@@ -122,22 +122,6 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void bnConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnConnexionActionPerformed
-        // TODO add your handling code here:
-        String login = txtLogin.getText().toString();
-        String password = txtPassword.getText().toString();
-
-        String regex = "^[a-zA-Z]{4}\\d{4}@uca\\.ac\\.ma$";
-
-        if (login.matches(regex) && password.equals("123")) { // TODO : modify login ***************************************
-            MDIApplication mdi = new MDIApplication();
-            mdi.setVisible(true);
-            this.setVisible(false);
-        } else {
-            JOptionPane.showMessageDialog(this, "Login ou mot de passe incorrect!"); // TODO : search for color dialog 
-        }
-    }//GEN-LAST:event_bnConnexionActionPerformed
-
     private void btnForgotPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnForgotPasswordActionPerformed
         // TODO add your handling code here:
         String login = JOptionPane.showInputDialog(this, "Veuillez saisir votre login :");
@@ -165,6 +149,22 @@ public class Main extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(this, "Le login ne peut pas être vide.");
         }
     }//GEN-LAST:event_btnForgotPasswordActionPerformed
+
+    private void bnConnexionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bnConnexionActionPerformed
+        // TODO add your handling code here:
+        String login = txtLogin.getText().toString();
+        String password = txtPassword.getText().toString();
+
+        String regex = "^[a-zA-Z]{4}\\d{4}@uca\\.ac\\.ma$";
+
+        if (login.matches(regex) && password.equals("123")) { // TODO : modify login ***************************************
+            MDIApplication mdi = new MDIApplication();
+            mdi.setVisible(true);
+            this.setVisible(false);
+        } else {
+            JOptionPane.showMessageDialog(this, "Login ou mot de passe incorrect!"); // TODO : search for color dialog
+        }
+    }//GEN-LAST:event_bnConnexionActionPerformed
 
     /**
      * @param args the command line arguments
