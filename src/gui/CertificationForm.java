@@ -64,9 +64,12 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         setIconifiable(true);
         setMaximizable(true);
         setResizable(true);
+        setTitle("Gestion des certifications");
+        setPreferredSize(new java.awt.Dimension(600, 450));
 
-        jPanel1.setBackground(javax.swing.UIManager.getDefaults().getColor("EditorPane.background"));
+        jPanel1.setBackground(new java.awt.Color(0, 204, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Gestion des certifications", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("C059", 0, 15), java.awt.Color.darkGray)); // NOI18N
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 200));
 
         jLabel1.setText("Nom :");
 
@@ -74,7 +77,13 @@ public class CertificationForm extends javax.swing.JInternalFrame {
 
         jLabel3.setText("Cout :");
 
-        bnAdd.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Green"));
+        txtNom.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNomActionPerformed(evt);
+            }
+        });
+
+        bnAdd.setBackground(new java.awt.Color(0, 153, 102));
         bnAdd.setText("Ajouter");
         bnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,7 +91,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             }
         });
 
-        bnDelete.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Red"));
+        bnDelete.setBackground(new java.awt.Color(255, 51, 0));
         bnDelete.setText("Supprimer");
         bnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,7 +99,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             }
         });
 
-        bnUpdate.setBackground(javax.swing.UIManager.getDefaults().getColor("Actions.Blue"));
+        bnUpdate.setBackground(new java.awt.Color(0, 102, 204));
         bnUpdate.setText("Modifier");
         bnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,7 +112,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap(221, Short.MAX_VALUE)
+                .addContainerGap(262, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2)
@@ -118,7 +127,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
                     .addComponent(bnDelete, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(bnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(185, Short.MAX_VALUE))
+                .addContainerGap(226, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -138,7 +147,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
                     .addComponent(jLabel3)
                     .addComponent(txtCout, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(bnUpdate))
-                .addContainerGap(44, Short.MAX_VALUE))
+                .addContainerGap(18, Short.MAX_VALUE))
         );
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("List.selectionForeground"));
@@ -173,7 +182,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(14, 14, 14)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(158, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -182,7 +191,7 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1015, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
@@ -248,6 +257,10 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         }
 
     }//GEN-LAST:event_bnUpdateActionPerformed
+
+    private void txtNomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNomActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
