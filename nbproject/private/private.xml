@@ -3,19 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/MDIApplication.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/EtudiantForm.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/Main.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/services/EmailSender.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/EtudiantParCertification.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/InscriptionForm.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/InscriptionParCertification.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/services/EtudiantService.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/services/InscriptionCertificationService.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/test/services/EmailSenderIT.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/services/UserService.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/CertificationForm.java</file>
-            <file>file:/home/yassinesalihi/NetBeansProjects/Cerification/src/gui/BarChart.java</file>
+            <file>file:/home/yassinesalihi/NetBeansProjects/experiment-clone/src/gui/Login.java</file>
         </group>
     </open-files>
 </project-private>
