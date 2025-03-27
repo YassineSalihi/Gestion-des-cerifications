@@ -56,6 +56,9 @@ public class CertificationForm extends javax.swing.JInternalFrame {
         bnAdd = new javax.swing.JButton();
         bnDelete = new javax.swing.JButton();
         bnUpdate = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         listeCertifications = new javax.swing.JTable();
@@ -115,6 +118,15 @@ public class CertificationForm extends javax.swing.JInternalFrame {
             }
         });
         jPanel1.add(bnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 152, 99, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Crystal Clear/22x22/actions/agt_family.png"))); // NOI18N
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 20, 30));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Crystal Clear/22x22/actions/edit_user.png"))); // NOI18N
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 40, -1, -1));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/Crystal Clear/22x22/devices/usbpendrive_mount.png"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 160, -1, -1));
 
         jPanel2.setBackground(javax.swing.UIManager.getDefaults().getColor("List.selectionForeground"));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Liste des certifications", javax.swing.border.TitledBorder.LEADING, javax.swing.border.TitledBorder.DEFAULT_POSITION));
@@ -236,6 +248,9 @@ public class CertificationForm extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;

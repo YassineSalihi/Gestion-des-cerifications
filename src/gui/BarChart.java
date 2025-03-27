@@ -65,7 +65,7 @@ public class BarChart extends javax.swing.JInternalFrame {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         List<InscriptionCertification> inscriptions = ics.findAll();
         
-         System.out.println("Nombre d'inscriptions : " + inscriptions.size()); 
+         //System.out.println("Nombre d'inscriptions : " + inscriptions.size()); 
         
         Map<String, Integer> countMap = new HashMap<>();
         for (InscriptionCertification ic : inscriptions) {

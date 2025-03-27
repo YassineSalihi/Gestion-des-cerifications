@@ -61,7 +61,9 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="436" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="396" max="-2" attributes="0"/>
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
                   <Component id="listeCertification" min="-2" pref="184" max="-2" attributes="0"/>
                   <EmptySpace pref="460" max="32767" attributes="0"/>
               </Group>
@@ -71,7 +73,10 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace pref="78" max="32767" attributes="0"/>
-                  <Component id="listeCertification" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                      <Component id="listeCertification" min="-2" max="-2" attributes="0"/>
+                  </Group>
                   <EmptySpace min="-2" pref="152" max="-2" attributes="0"/>
               </Group>
           </Group>
@@ -90,6 +95,13 @@
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
           </AuxValues>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel6">
+          <Properties>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/resources/Crystal Clear/22x22/actions/find.png"/>
+            </Property>
+          </Properties>
         </Component>
       </SubComponents>
     </Container>
